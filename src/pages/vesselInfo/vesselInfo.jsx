@@ -1,5 +1,6 @@
 import React from 'react';
 import { addVessel } from './vesselInfo.js';
+import { FormVesselInfo } from '../../components/index.js'
 
 export class VesselInfo extends React.Component {
   constructor () {
@@ -16,32 +17,8 @@ export class VesselInfo extends React.Component {
   render() {
     return (
         <form id="form2" onSubmit={this.onSubmit}>
-          <h1>Vessel Information</h1>
-          <label for="reg">Registration Number:</label><br/>
-          <input type="text" id="reg" name="reg" placeholder="TX-1234-AB"/><br/>
-          <br/>
-
-          <input type="radio" id="outboard" name="outboard"/>
-          <label for="outboard">Outboard</label><br/>
-
-          <input type="radio" id="sternDrive" name="sternDrive"/>
-          <label for="sternDrive">Sterndrive</label><br/>
-
-          <input type="radio" id="vDrive" name="vDrive"/>
-          <label for="vDrive">V-Drive</label><br/>
-
-          <input type="radio" id="jski" name="jski"/>
-          <label for="jski">Jet Ski</label><br/>
-          <br/>
           
-          <label for="vyear">Year</label><br/>
-          <input type="number" id="vyear" name="vyear"/><br/>
-
-          <label for="vmake">Make</label><br/>
-          <input type="text" id="vmake" name="vmake"/><br/>
-
-          <label for="vmodel">Model</label><br/>
-          <input type="text" id="vmodel" name="vmodel"/><br/>
+          <FormVesselInfo/>
     
           <h1>Engine Information</h1>
 
@@ -89,3 +66,32 @@ export class VesselInfo extends React.Component {
     )
   }
 }
+
+/*
+<h1>Vessel Information</h1>
+          <label for="reg">Registration Number:</label><br/>
+          <input type="text" id="reg" name="reg" placeholder="TX-1234-AB"/><br/>
+          <br/>
+
+          <VesselType/>
+
+          <label for="vyear">Year</label><br/>
+          <input type="number" id="vyear" name="vyear"/><br/>
+
+          <label for="vmake">Make</label><br/>
+          <input type="text" id="vmake" name="vmake"/><br/>
+
+          <label for="vmodel">Model</label><br/>
+          <input type="text" id="vmodel" name="vmodel"/><br/>
+<input type="radio" id="outboard" name="outboard"/>
+          <label for="outboard">Outboard</label><br/>
+
+          <input type="radio" id="sternDrive" name="sternDrive"/>
+          <label for="sternDrive">Sterndrive</label><br/>
+
+          <input type="radio" id="vDrive" name="vDrive"/>
+          <label for="vDrive">V-Drive</label><br/>
+
+          <input type="radio" id="jski" name="jski"/>
+          <label for="jski">Jet Ski</label><br/>
+          <br/>*/
