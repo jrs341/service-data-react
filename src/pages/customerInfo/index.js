@@ -1,3 +1,3 @@
-import CustomerInfo from "./customerInfo.jsx";
+import { CustomerInfo } from "./customerInfo.jsx";
 
-export default CustomerInfo;
+export { CustomerInfo };

@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import firebase from './utils/firebase';
-import CustomerInfo from './pages/index.js';
+import { CustomerInfo, VesselInfo } from './pages/index.js';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <CustomerInfo />
+    <VesselInfo />
   </React.StrictMode>,
   document.getElementById('root')
 );

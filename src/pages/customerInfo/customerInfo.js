@@ -1,4 +1,4 @@
-import { customerCollection, emailsCollection } from '../../utils/firebase.js';
+import { customerCollection } from '../../utils/firebase.js';
 import { addDoc } from 'firebase/firestore/lite';
 
 export function addCustomer(event){

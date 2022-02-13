@@ -21,13 +21,12 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
 const customerCollection = collection(db, 'Customer Info');
-const emailsCollection = collection(db, 'emails');
+
 const vesselCollection = collection(db, 'Vessel Info');
 
 export {
   db,
   app,
   customerCollection,
-  emailsCollection,
   vesselCollection
 };

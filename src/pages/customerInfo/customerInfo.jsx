@@ -1,7 +1,7 @@
 import React from 'react';
 import { addCustomer } from './customerInfo.js';
 
-export default class CustomerInfo extends React.Component {
+export class CustomerInfo extends React.Component {
   constructor () {
     super()
 
