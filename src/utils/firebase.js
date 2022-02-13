@@ -22,4 +22,4 @@ const db = getFirestore();
 
 const customerCollection = collection(db, 'Customer Info');
 
-export {db, app};
+export {db, app, customerCollection};
