@@ -1,4 +1,8 @@
 import Login from './login.jsx';
+import CustomerInfo from './customerInfo/index.js';
 
 
-export default Login
+export {
+    Login,
+    CustomerInfo
+};
