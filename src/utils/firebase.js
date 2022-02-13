@@ -21,5 +21,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
 const customerCollection = collection(db, 'Customer Info');
+const emailsCollection = collection(db, 'emails');
 
-export {db, app, customerCollection};
+export {db, app, customerCollection, emailsCollection};

@@ -1,6 +1,6 @@
 import React from 'react'
-import { customerCollection } from '../utils/firebase.js';
-import { addDoc } from 'firebase/firestore/lite';
+import { customerCollection, emailsCollection } from '../utils/firebase.js';
+import { addDoc, collection } from 'firebase/firestore/lite';
 
 export default class login extends React.Component {
   constructor () {
@@ -23,8 +23,16 @@ export default class login extends React.Component {
         addDoc(customerCollection, data)
           .then(docRef => {
           console.log("Document written with ID: ", docRef.id);
+          addDoc(emailsCollection, {
+            to: 'jrs341@me.com',
+            message: {
+              subject: 'Hello from Firebase!',
+              text: 'This is the plaintext section of the email body.',
+              html: 'This is the <code>HTML</code> section of the email body.',
+            }
+          }).then(() => console.log('Queued email for delivery!'));
       });
-    }
+    };
 
   render() {
     return (
