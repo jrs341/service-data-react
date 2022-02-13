@@ -1,34 +1,21 @@
-import React from 'react'
-import { customerCollection } from '../utils/firebase.js';
-import { addDoc } from 'firebase/firestore/lite';
+import React from 'react';
+import { addCustomer } from './customerInfo.js';
 
-export default class login extends React.Component {
+export default class CustomerInfo extends React.Component {
   constructor () {
     super()
 
-    this.addCustomer = this.addCustomer.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
-
-  addCustomer(event) {
+  
+  onSubmit(event) {
     event.preventDefault();
-    let data = {};
-    console.log('this', event.target.id);
-    var elem = document.getElementById(event.target.id).elements;
-      for(var i = 0; i < elem.length; i++)
-        if(elem[i].name === "" || elem[i].value === "Submit"){console.log(elem[i].name)}
-        else {
-          data[elem[i].name] = elem[i].value; 
-        }
-        console.log('data', data);
-        addDoc(customerCollection, data)
-          .then(docRef => {
-          console.log("Document written with ID: ", docRef.id);
-      });
-    }
+    addCustomer(event);
+  };
 
   render() {
     return (
-    <form id="form1" onSubmit={this.addCustomer} autocomplete="on">
+    <form id="form1" onSubmit={this.onSubmit} autocomplete="on">
       <label for="email">Email Address:</label><br/>
       <input type="email" id="email" name="email"/><br/>
 
