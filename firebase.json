@@ -12,6 +12,7 @@
     ]
   },
   "hosting": {
+    "site": "servicedata",
     "public": "public",
     "ignore": [
       "firebase.json",
