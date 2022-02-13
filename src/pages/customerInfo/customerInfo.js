@@ -13,7 +13,7 @@ export function addCustomer(event){
         }
         addDoc(customerCollection, data)
           .then(docRef => {
-          console.log("Document written with ID: ", docRef.id);
+          //console.log("Document written with ID: ", docRef.id);
           addDoc(emailsCollection, {
             to: data.email,
             message: {
