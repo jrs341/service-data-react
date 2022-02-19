@@ -66,12 +66,12 @@ export class VesselInfoForm extends React.Component {
 
           <div style={{ display: ((this.state.vType === "V-Drive" || this.state.vType === "Sterndrive")) ? "block" : "none"}}>
           <label for="emake">Model</label><br/>
-          <input type="text" id="emake" name="emake"/><br/>
+          <input type="text" id="emodel" name="emake"/><br/>
           </div>
 
           <div style={{ display: ((this.state.vType === "Outboard")) ? "block" : "none"}}>
           <label for="emodel">Model Number</label><br/>
-          <input type="text" id="emodel" name="emodel"/><br/>
+          <input type="text" id="emodelNum" name="emodelNum"/><br/>
           </div>
 
           <div style={{ display: ((this.state.vType === "Outboard")) ? "block" : "none"}}>
@@ -81,7 +81,7 @@ export class VesselInfoForm extends React.Component {
 
           <div style={{ display: ((this.state.vType === "V-Drive" || this.state.vType === "Sterndrive")) ? "block" : "none"}}>
           <label for="ehp">Engine Size:</label><br/>
-          <input type="text" id="ehp" name="ehp"/><br/>
+          <input type="text" id="esize" name="esize"/><br/>
           </div>
 
           <div style={{ display: ((this.state.vType === "Outboard" || this.state.vType === "V-Drive" || this.state.vType === "Sterndrive")) ? "block" : "none"}}>

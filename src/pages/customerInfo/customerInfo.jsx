@@ -7,11 +7,10 @@ import { AddCustomer } from './customerInfo.js';
 
     const onSubmit = (event) => {
       event.preventDefault();
-      console.log('submit', event.target.id);
       AddCustomer(event);
       navigate("/vesselInfo");
     };
-    
+
     return (
     <form id="form1" onSubmit={onSubmit} autoComplete="on">
       <label for="email">Email Address:</label><br/>
