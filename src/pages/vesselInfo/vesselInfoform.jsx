@@ -6,7 +6,7 @@ export class VesselInfoForm extends React.Component {
   constructor () {
     super();
     this.state = {
-      type: ""
+     vType: ""
     };
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -15,15 +15,13 @@ export class VesselInfoForm extends React.Component {
   
   onSubmit(event) {
     event.preventDefault();
-    addVessel(event);
-    console.log('vessel type', this.state.type);
-    console.log('vesselIfoform submit event', event);
+    addVessel(event, this.state.vType);
   };
 
   setvType (event) {
     console.log('VesselInfoForm event', event.target.value);
     this.setState({
-        type: event.target.value
+        vType: event.target.value
     });
 };
 

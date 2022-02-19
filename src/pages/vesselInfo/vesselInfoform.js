@@ -1,16 +1,19 @@
 import { vesselCollection } from '../../utils/firebase.js';
 import { addDoc } from 'firebase/firestore/lite';
 
-export function addVessel(event){
+export function addVessel(event, vType){
     event.preventDefault();
     let data = {};
     var elem = document.getElementById(event.target.id).elements;
       for(var i = 0; i < elem.length; i++)
         if(elem[i].name === "" || elem[i].value === "Submit"){}
-          //{console.log(elem[i].name)}
+        else if (elem[i].name === "vesselType") {
+          data["vesselType"] = vType;
+        }
         else {
           data[elem[i].name] = elem[i].value; 
         }
+        console.log('addVessel data', vType);
         console.log('addVessel data', data);
         /*addDoc(vesselCollection, data)
           .then(docRef => {
