@@ -17,7 +17,6 @@ export class FormVesselInfo extends React.Component {
     }
 
     setvType (event) {
-        console.log('setvType event', event.target.value);
         this.setState({
             type: event.target.value
         });
