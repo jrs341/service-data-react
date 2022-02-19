@@ -6,7 +6,7 @@ export class VesselInfoForm extends React.Component {
   constructor () {
     super();
     this.state = {
-     vType: ""
+     vType: "Outboard"
     };
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -19,7 +19,6 @@ export class VesselInfoForm extends React.Component {
   };
 
   setvType (event) {
-    console.log('VesselInfoForm event', event.target.value);
     this.setState({
         vType: event.target.value
     });
@@ -52,7 +51,8 @@ export class VesselInfoForm extends React.Component {
           
           <VesselInfo setvType={this.setvType}/>
 
-          <h1 style={{ display: (this.state.vType === "Outboard" || this.state.vType === "V-Drive" || this.state.vType === "Sterndrive") ? "block" : "none"}}>Engine Information</h1>
+          <h1 style={{ display: (this.state.vType === "Outboard" || this.state.vType === "V-Drive" || this.state.vType === "Sterndrive") ? "block" : "none"}}>
+            Engine Information</h1>
 
           <div style={{ display: (this.state.vType === "Outboard" || this.state.vType === "V-Drive" || this.state.vType === "Sterndrive") ? "block" : "none"}}>
           <label for="eman">Engine Manufacturer:</label><br/>
@@ -90,7 +90,6 @@ export class VesselInfoForm extends React.Component {
           </div>
 
           <br/>
-          
         </form>
         <button type="submit" form="form2" value="Submit">Submit</button>
         </div>

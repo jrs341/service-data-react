@@ -4,7 +4,7 @@ export class VesselType extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      vType: ""
+      vType: "Outboard"
     };
     this.typeChange = this.typeChange.bind(this);
   }
