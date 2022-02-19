@@ -1,3 +1,3 @@
-import { VesselInfo } from "./vesselInfo.jsx";
+import { VesselInfoForm } from "./vesselInfoform.jsx";
 
-export { VesselInfo };
+export { VesselInfoForm };

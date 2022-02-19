@@ -1,18 +1,31 @@
 import React from 'react';
-import { addVessel } from './vesselInfo.js';
-import { FormVesselInfo } from '../../components/index.js'
+import { addVessel } from './vesselInfoform.js';
+import { VesselInfo } from '../../components/index.js'
 
-export class VesselInfo extends React.Component {
+export class VesselInfoForm extends React.Component {
   constructor () {
-    super()
+    super();
+    this.state = {
+      type: ""
+    };
 
     this.onSubmit = this.onSubmit.bind(this);
+    this.setvType = this.setvType.bind(this);
   }
   
   onSubmit(event) {
     event.preventDefault();
     addVessel(event);
+    console.log('vessel type', this.state.type);
+    console.log('vesselIfoform submit event', event);
   };
+
+  setvType (event) {
+    console.log('VesselInfoForm event', event.target.value);
+    this.setState({
+        type: event.target.value
+    });
+};
 
   render() {
     return (
@@ -38,7 +51,7 @@ export class VesselInfo extends React.Component {
           <input type="textarea" id="issueDescription" name="issueDescription" rows="4" cols="50" placeholder="Time is alloted based on the work you would like done to your vessel.  Please list ALL items in the description."/><br/>
           <br/>
           
-          <FormVesselInfo/>
+          <VesselInfo setvType={this.setvType}/>
     
           <h1>Engine Information</h1>
 

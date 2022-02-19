@@ -1,32 +1,22 @@
 import React from "react";
 import { VesselType } from "./index.js";
 
-export class FormVesselInfo extends React.Component {
+export class VesselInfo extends React.Component {
   constructor(props) {
     super();
-    this.state = {
-      type: ""
-    };
 
-    this.onSubmit = this.onSubmit.bind(this);
     this.setvType = this.setvType.bind(this);
   }
 
-    onSubmit() { 
-        this.props.onSubmit(this.state.vType);
-    }
-
     setvType (event) {
-        this.setState({
-            type: event.target.value
-        });
-    }
+      this.props.setvType(event);
+    };
 
   render() {
     return (
       <div>
         <h1>Vessel Information</h1>
-        <div onSubmit={this.onSubmit}>
+        <div>
           <label for="reg">Registration Number:</label><br/>
           <input type="text" id="reg" name="reg" placeholder="TX-1234-AB"/><br/>
           <br/>

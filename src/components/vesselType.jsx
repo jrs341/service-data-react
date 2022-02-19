@@ -13,6 +13,7 @@ export class VesselType extends React.Component {
     this.setState({
       vType: event.target.value
     });
+    //console.log('type change', event.target.value);
     this.props.setvType(event);
   };
 

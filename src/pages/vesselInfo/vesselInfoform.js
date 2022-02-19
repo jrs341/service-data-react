@@ -11,7 +11,7 @@ export function addVessel(event){
         else {
           data[elem[i].name] = elem[i].value; 
         }
-        console.log('data', data);
+        console.log('addVessel data', data);
         /*addDoc(vesselCollection, data)
           .then(docRef => {
           //console.log("Document written with ID: ", docRef.id);
