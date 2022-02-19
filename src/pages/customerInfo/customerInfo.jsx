@@ -1,21 +1,18 @@
 import React from 'react';
-import { addCustomer } from './customerInfo.js';
+import { useNavigate } from "react-router-dom";
+import { AddCustomer } from './customerInfo.js';
 
-export default class CustomerInfo extends React.Component {
-  constructor () {
-    super()
+  const CustomerInfo = () => {
+    let navigate = useNavigate();
 
-    this.onSubmit = this.onSubmit.bind(this);
-  }
-  
-  onSubmit(event) {
-    event.preventDefault();
-    addCustomer(event);
-  };
+    const onSubmit = (event) => {
+      event.preventDefault();
+      AddCustomer(event);
+      navigate("/vesselInfo");
+    };
 
-  render() {
     return (
-    <form id="form1" onSubmit={this.onSubmit} autocomplete="on">
+    <form id="form1" onSubmit={onSubmit} autoComplete="on">
       <label for="email">Email Address:</label><br/>
       <input type="email" id="email" name="email"/><br/>
 
@@ -45,4 +42,5 @@ export default class CustomerInfo extends React.Component {
     </form>
     )
   }
-}
+
+export { CustomerInfo };

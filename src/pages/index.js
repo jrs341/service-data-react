@@ -1,3 +1,7 @@
-import CustomerInfo from './customerInfo/index.js';
+import { CustomerInfo } from './customerInfo/index.js';
+import { VesselInfoForm } from './vesselInfo/index.js';
 
-export default CustomerInfo;
+export { 
+    CustomerInfo,
+    VesselInfoForm
+};
