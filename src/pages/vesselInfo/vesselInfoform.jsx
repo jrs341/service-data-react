@@ -27,6 +27,7 @@ export class VesselInfoForm extends React.Component {
 
   render() {
     return (
+      <div>
         <form id="form2" onSubmit={this.onSubmit}>
           <h1>Service Address</h1>
           <label for="sadr">Street Address:</label><br/>
@@ -50,30 +51,49 @@ export class VesselInfoForm extends React.Component {
           <br/>
           
           <VesselInfo setvType={this.setvType}/>
-    
-          <h1>Engine Information</h1>
 
+          <h1 style={{ display: (this.state.vType === "Outboard" || this.state.vType === "V-Drive" || this.state.vType === "Sterndrive") ? "block" : "none"}}>Engine Information</h1>
+
+          <div style={{ display: (this.state.vType === "Outboard" || this.state.vType === "V-Drive" || this.state.vType === "Sterndrive") ? "block" : "none"}}>
           <label for="eman">Engine Manufacturer:</label><br/>
           <input type="text" id="eman" name="eman"/><br/>
+          </div>
 
-          <label for="ehp">Engine Horsepower:</label><br/>
-          <input type="text" id="ehp" name="ehp"/><br/>
-
-          <label for="esn">Engine Serial Number:</label><br/>
-          <input type="text" id="esn" name="esn"/><br/>
-
+          <div style={{ display: ((this.state.vType === "Outboard")) ? "block" : "none"}}>
           <label for="eyear">Year</label><br/>
           <input type="number" id="eyear" name="eyear"/><br/>
+          </div>
 
-          <label for="emake">Make</label><br/>
+          <div style={{ display: ((this.state.vType === "V-Drive" || this.state.vType === "Sterndrive")) ? "block" : "none"}}>
+          <label for="emake">Model</label><br/>
           <input type="text" id="emake" name="emake"/><br/>
+          </div>
 
-          <label for="emodel">Model</label><br/>
+          <div style={{ display: ((this.state.vType === "Outboard")) ? "block" : "none"}}>
+          <label for="emodel">Model Number</label><br/>
           <input type="text" id="emodel" name="emodel"/><br/>
-          <br/>
+          </div>
 
-          <button type="submit" form="form2" value="Submit">Submit</button>
+          <div style={{ display: ((this.state.vType === "Outboard")) ? "block" : "none"}}>
+          <label for="ehp">Engine Horsepower:</label><br/>
+          <input type="text" id="ehp" name="ehp"/><br/>
+          </div>
+
+          <div style={{ display: ((this.state.vType === "V-Drive" || this.state.vType === "Sterndrive")) ? "block" : "none"}}>
+          <label for="ehp">Engine Size:</label><br/>
+          <input type="text" id="ehp" name="ehp"/><br/>
+          </div>
+
+          <div style={{ display: ((this.state.vType === "Outboard" || this.state.vType === "V-Drive" || this.state.vType === "Sterndrive")) ? "block" : "none"}}>
+          <label for="esn">Engine Serial Number:</label><br/>
+          <input type="text" id="esn" name="esn"/><br/>
+          </div>
+
+          <br/>
+          
         </form>
+        <button type="submit" form="form2" value="Submit">Submit</button>
+        </div>
     )
   }
 }
