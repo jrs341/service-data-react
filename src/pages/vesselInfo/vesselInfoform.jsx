@@ -9,7 +9,7 @@ const VesselInfoForm = () => {
 
     const onSubmit = (event) => {
       event.preventDefault();
-      //addVessel(event);
+      addVessel(event);
       navigate("/");
     };
 

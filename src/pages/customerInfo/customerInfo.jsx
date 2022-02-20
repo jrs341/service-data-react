@@ -40,7 +40,7 @@ import { AddCustomer } from './customerInfo.js';
 
       <button type="submit" form="form1" value="Submit">Submit</button>
     </form>
-    )
-  }
+    );
+  };
 
 export { CustomerInfo };
