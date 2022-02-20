@@ -10,7 +10,7 @@ const VesselInfoForm = () => {
     const onSubmit = (event) => {
       event.preventDefault();
       addVessel(event, vType);
-      navigate("/");
+      navigate("/intakeFormComplete");
     };
 
     const typeChange = (event) => {
