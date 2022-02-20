@@ -13,7 +13,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-          <Route exact path = "/" element={<VesselInfoForm/>}>
+          <Route exact path = "/" element={<CustomerInfo/>}>
           </Route>
           <Route exact path="/vesselInfo" element={<VesselInfoForm/>}>
           </Route>
