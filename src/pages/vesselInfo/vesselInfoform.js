@@ -21,10 +21,10 @@ export function addVessel(event, vType){
             vesselId: vesselId
           });
           addDoc(emailsCollection, {
-            to: data.email,
+            to: localStorage.getItem('email'),
             message: {
               subject: 'Austin Mobile Marine Mechanic Service Request',
-              text: `Hello ${localStorage.getItem.fname} ${localStorage.getItem.lname},
+              text: `Hello ${localStorage.getItem('fname')} ${localStorage.getItem('lname')},
               
               Thank you for trusting Austin Mobile Marine Mechanic to service your vessel.  Please allow up to three days for scheduling. If you do not receive an option for scheduling within that timeframe, please feel free to call or send a text message to 512 200 3433.\n\nSincerely,\n\nJason Sinn\nAustin Mobile Marine Mechanic\n512 200 3433`,
             }

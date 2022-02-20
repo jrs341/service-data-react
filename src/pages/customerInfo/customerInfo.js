@@ -10,10 +10,11 @@ export function AddCustomer(event){
         else {
           data[elem[i].name] = elem[i].value; 
         }
+        localStorage.setItem('fname', data.fname);
+        localStorage.setItem('lname', data.lname);
+        localStorage.setItem('email', data.email);
         addDoc(customerCollection, data)
           .then(docRef => {
           localStorage.setItem('ownerRefId', docRef.id);
-          localStorage.setItem('fname', data.fname);
-          localStorage.setItem('lname', data.lname);
       });
     };
