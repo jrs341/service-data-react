@@ -11,7 +11,7 @@ const IntakeLandingPage = () => {
     return (
         <div>
             <p>
-                Before continuing it may be helpful to open the following link in a new tab: <a href='https://apps.tpwd.state.tx.us/tora/home.faces'>Query Owner Info</a>
+                Before continuing it may be helpful to open the following link in a new tab: <a href='https://apps.tpwd.state.tx.us/tora/home.faces' target="_blank" rel="noopener noreferrer">Query Owner Info</a>
             </p>
             <button onClick={handleClick}>Continue</button>
         </div>
